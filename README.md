@@ -9,14 +9,14 @@ Simple CRUD Operations: Implements basic create, read, update, and delete operat
 Prerequisites
 Before running the application, make sure you have the following:
 
-Java 17 or later: The application is built with Java 17.
+Java 17 or later: The application is built with Java 23.
 MySQL Database: Set up MySQL locally or remotely. Ensure a database is created (e.g., cpdatabase) and configured correctly.
 Setup
 Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/demo-application.git
+git clone https://github.com/Shivansh73/demo-application.git
 cd demo-application
 Configure the MySQL database: In src/main/resources/application.properties, update the following properties with your MySQL credentials:
 
@@ -24,7 +24,7 @@ properties
 Copy code
 spring.datasource.url=jdbc:mysql://localhost:3306/cpdatabase
 spring.datasource.username=root
-spring.datasource.password=yourpassword
+spring.datasource.password=Lnct@2024
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
@@ -45,12 +45,22 @@ Copy code
 java -jar target/demo-application.jar
 The application will start on port 8080 by default.
 
+
 API Endpoints
+POST /api/categories : Create a new product.
+GET /api/categories?page=3: Retrieve all products.
+GET /api/categories/{di}: Retrieve a product by ID.
+PUT /api/categories/{di}: Update a product by ID.
+DELETE /api/categories/{di}: Delete a product by ID.
+
+
 POST /api/products: Create a new product.
 GET /api/products: Retrieve all products.
 GET /api/products/{id}: Retrieve a product by ID.
 PUT /api/products/{id}: Update a product by ID.
 DELETE /api/products/{id}: Delete a product by ID.
+
+
 Running Tests
 To run tests, use the following command:
 
@@ -67,3 +77,8 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
+
